@@ -1,18 +1,14 @@
 ﻿// Задача 13: Напишите программу, которая выводиит третью цифру заданного числа или сообщает, что третьей цифры нет
 
-if (numberA > 99)
+int randomNumber = new Random().Next(10,999);
+Console.WriteLine(randomNumber);
+int x = 99;
+if (randomNumber < x)
 {
-    while(numberA >= 1000)
-    {
-        int requiredNumber = (numberA / 10);
-        numberA  = requiredNumber; 
-    }
-    Console.WriteLine ("Третья цифра Вашего числа: " + numberA % 10);
+Console.WriteLine( "Третьей цифры нет");
 }
-else
+else 
 {
-    Console.WriteLine ("Третьей цифры нет");
+int number = randomNumber % 10;
+Console.WriteLine(number);
 }
-
-Console.Write("Введите число: ");
-int numberA = Convert.ToInt32(Console.ReadLine());
